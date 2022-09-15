@@ -1,0 +1,21 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid f3dad615-4508-4c77-beaa-6712995241d0)
+
+  (paper "A4")
+
+  (title_block
+    (title "Rich Keyboard")
+    (date "2018-11-16")
+    (rev "1.0")
+    (company "rvnash")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
