@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 2.7,
+          "height": 2.7,
+          "width": 2.7
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -55,7 +55,22 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|137945000|86950000|d79a556b-7aad-414e-aa4d-12cef3fa4b5b|4b040cf7-af03-4751-8285-cbacffe95dde",
+        "clearance|137945000|88300000|486ccd07-a7ed-468c-be7e-5b01e70c2bd0|857796e4-4101-42fb-82e3-dad9070c9a42",
+        "clearance|138795000|86950000|4b040cf7-af03-4751-8285-cbacffe95dde|0825689f-64ee-4496-b8db-ef52de14aa9a",
+        "clearance|138795000|88300000|82f75992-fae0-42c4-84ee-ac0c85650fb7|486ccd07-a7ed-468c-be7e-5b01e70c2bd0",
+        "clearance|139645000|86950000|0825689f-64ee-4496-b8db-ef52de14aa9a|e58aac0e-dc99-4dda-84dc-98fb35dd6372",
+        "clearance|139645000|88300000|a0f4e3c2-5f08-437c-a866-0e7197d45f7e|82f75992-fae0-42c4-84ee-ac0c85650fb7",
+        "clearance|140495000|86950000|e58aac0e-dc99-4dda-84dc-98fb35dd6372|8e1627c1-d4ca-4c5d-855b-d464af7f2318",
+        "clearance|140495000|88300000|43c4e463-9ab3-47ee-9413-9456888577fb|a0f4e3c2-5f08-437c-a866-0e7197d45f7e",
+        "clearance|141345000|86950000|8e1627c1-d4ca-4c5d-855b-d464af7f2318|b1699d2e-0e79-4e54-bc2b-5c9c7dea04b8",
+        "clearance|141345000|88300000|48704521-8c1a-4cbd-8284-f25deeaa9a1a|43c4e463-9ab3-47ee-9413-9456888577fb",
+        "clearance|142195000|86950000|b1699d2e-0e79-4e54-bc2b-5c9c7dea04b8|08907148-bc52-4582-a593-bc0b381b3a82",
+        "clearance|142195000|88300000|748886b2-be6c-43e6-a9ed-fc4100842d9d|48704521-8c1a-4cbd-8284-f25deeaa9a1a",
+        "clearance|143045000|86950000|08907148-bc52-4582-a593-bc0b381b3a82|d4a2a44c-7afc-4093-86ca-ec9071889801",
+        "clearance|143045000|88300000|da0604a6-0100-4b29-a603-ff3e0a7d8087|748886b2-be6c-43e6-a9ed-fc4100842d9d"
+      ],
       "meta": {
         "version": 2
       },
@@ -346,7 +361,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "richkbd.kicad_pro",
+    "filename": "richkbd_stamp.kicad_pro",
     "version": 1
   },
   "net_settings": {
