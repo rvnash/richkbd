@@ -6,8 +6,8 @@
 
   (title_block
     (title "Rich Keyboard")
-    (date "2018-11-16")
-    (rev "1.0")
+    (date "2022-09-28")
+    (rev "2.0")
     (company "rvnash")
   )
 
@@ -6786,7 +6786,7 @@
   (symbol (lib_id "power:GND") (at 119.38 192.405 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8e04b2ad-ebd4-4324-ad5e-d1232b9f4b86)
-    (property "Reference" "#PWR?" (id 0) (at 119.38 198.755 0)
+    (property "Reference" "#PWR0120" (id 0) (at 119.38 198.755 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 119.38 196.215 0))
@@ -8059,6 +8059,9 @@
     (path "/af869959-29de-4820-9f1e-61b9bcbf3588"
       (reference "#PWR0119") (unit 1) (value "GND") (footprint "")
     )
+    (path "/8e04b2ad-ebd4-4324-ad5e-d1232b9f4b86"
+      (reference "#PWR0120") (unit 1) (value "GND") (footprint "")
+    )
     (path "/84b9fe78-8156-40a3-bcc3-a7602d21f42c"
       (reference "#PWR0125") (unit 1) (value "VCC") (footprint "")
     )
@@ -8274,9 +8277,6 @@
     )
     (path "/703f6f49-b057-45e6-98dc-38eca084cdb3"
       (reference "#PWR0196") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/8e04b2ad-ebd4-4324-ad5e-d1232b9f4b86"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/5530f26f-ed7b-4419-9257-0a8f680475f6"
       (reference "D1") (unit 1) (value "1N914BWS") (footprint "Diode_SMD:D_1812_4532Metric_Pad1.30x3.40mm_HandSolder")
