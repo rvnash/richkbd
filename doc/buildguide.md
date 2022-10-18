@@ -5,9 +5,9 @@ These parts are needed to create a complete keyboard. The "where to get it" colu
 
 | Count | Part | Description | Where to get it |
 | --- | --- | --- | --- |
-| 1  | PCB | The printed circuit board onto which will be mounted all of the components. | Here is the [Gerber File](pcb_stamp/production/gerber.zip) to send to have the board fabricated. I used JLCPCB, and got excellent results for a good price. |
+| 1  | PCB | The printed circuit board onto which will be mounted all of the components. | Here is the [Gerber File](../pcb_stamp/production/gerber.zip) to send to have the board fabricated. I used JLCPCB, and got excellent results for a good price. |
 | 4 | Top Plate | The non-electrical plates that mechanically serve to hold the Choc switches in place. Two are required on each side. | [Gerber File](../top_plate/production/gerber.zip) **Note that these boards can be either 1mm or 2mm in thickness. The 2mm boards are much more expensive to fabricate, so take two 1mm boards and stack them.** |
-| 1 | Bottom Plate | The non-electrical plate that serves as the base of the keyboard | [Gerber File](bottom_plate/production/gerber.zip) |
+| 1 | Bottom Plate | The non-electrical plate that serves as the base of the keyboard | [Gerber File](../bottom_plate/production/gerber.zip) |
 | 42 | Choc sockets | Hotswappable Choc Sockets | [Adafruit Link](https://www.adafruit.com/product/5118)  |
 | 42 | Choc switches | Pick your favorite switches | [Kailh](http://www.kailh.com/en/Products/Ks/CS/) |
 | 42 | Keycaps | Choc compatible keycaps | [Little Keyboards Link](https://www.littlekeyboards.com/products/mbk-40s-keycaps) |
