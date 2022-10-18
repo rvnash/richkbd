@@ -5,18 +5,18 @@ These parts are needed to create a complete keyboard. The "where to get it" colu
 
 | Count | Part | Description | Where to get it |
 | --- | --- | --- | --- |
-| 1  | PCB | The printed circuit board onto which will be mounted all of the components. | Here (pcb_stamp/production/gerber.zip) in this repository are the files necessary to have the board fabricated. I usec JLCPCB, and got excellent results for a good price. |
-| 4 | Top Plate (1mm thickness) | The non-electrical plates that mechanically serve to hold the Choc switches in place. Two are required on each side. | Get these fabricated too. (top_plate/production/gerber.zip) |
-| 1 | Bottom Plate | The non-electrical plate that serves as the base of the keyboard | Get these fabricated too. (bottom_plate/production/gerber.zip) |
+| 1  | PCB | The printed circuit board onto which will be mounted all of the components. | Here is the [Gerber File](pcb_stamp/production/gerber.zip) to send to have the board fabricated. I used JLCPCB, and got excellent results for a good price. |
+| 4 | Top Plate | The non-electrical plates that mechanically serve to hold the Choc switches in place. Two are required on each side. | [Gerber File](../top_plate/production/gerber.zip) **Note that these boards can be either 1mm or 2mm in thickness. The 2mm boards are much more expensive to fabricate, so take two 1mm boards and stack them.** |
+| 1 | Bottom Plate | The non-electrical plate that serves as the base of the keyboard | [Gerber File](bottom_plate/production/gerber.zip) |
 | 42 | Choc sockets | Hotswappable Choc Sockets | [Adafruit Link](https://www.adafruit.com/product/5118)  |
 | 42 | Choc switches | Pick your favorite switches | [Kailh](http://www.kailh.com/en/Products/Ks/CS/) |
-| 42 | Choc compatible keycaps | Pick your favorite keycaps | [Little Keyboards Link](https://www.littlekeyboards.com/products/mbk-40s-keycaps) |
+| 42 | Keycaps | Choc compatible keycaps | [Little Keyboards Link](https://www.littlekeyboards.com/products/mbk-40s-keycaps) |
 | 43 | Diodes | Vishay 1N4148W-E3-18 (Note there are **43** of these) | [Digi-Key Link](https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N4148W-E3-18/3104163) |
-| 42 | Neopixel Reverse Mount RGB LEDs (SK6812-E) | Adafruit 4960 | [Adafruit Link](https://www.adafruit.com/product/4960) |
+| 42 | LEDS | Neopixel Reverse Mount RGB LEDs (SK6812-E) | [Adafruit Link](https://www.adafruit.com/product/4960) |
 | 2 | 10K SMD Resistors | Stackpole RMCF0603JT10K0 | [Digi-Key Link](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603JT10K0/1758104) |
 | 2 | 5.1K SMD Resistors | Stackpole RMCF0603FT5K10 | [Digi-Key Link](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT5K10/1760908) |
 | 1 | RP2040 Stamp | RP2040 based MCU board | [Tindie Link](https://www.tindie.com/products/arturo182/rp2040-stamp/) |
-| 1 | 128x64 OLED Display | | [Amazon Link](https://www.amazon.com/dp/B0B7RPCZ4Z?psc=1&ref=ppx_yo2ov_dt_b_product_details) |
+| 1 | 128x64 Display | I2C OLED Display Module | [Amazon Link](https://www.amazon.com/dp/B0B7RPCZ4Z?psc=1&ref=ppx_yo2ov_dt_b_product_details) |
 | 1 | USB-C Connector | GCT USB4085-GF-A | [Digi-Key Link](https://www.digikey.com/en/products/detail/gct/USB4085-GF-A/9859662) |
 | 2 | Push buttons | For reset and boot-select | [Adafruit Link](https://www.adafruit.com/product/1489) |
 | 8 | M2*10 Screws | To hold the layers together | Assortment Kit at [Amazon](https://www.amazon.com/dp/B082XRX17Z?psc=1&ref=ppx_yo2ov_dt_b_product_details) |
@@ -28,23 +28,23 @@ These parts are needed to create a complete keyboard. The "where to get it" colu
 
 ### 1. Soldering the LEDS, Diodes, and Resistors
 
-I listed this as one step, because I use a reflow oven to solder them all at once. These parts are large enough, however to solder them by hand. Just use a narrow tipped soldering iron.
+I listed this as one step, because I use a reflow oven to solder them all at once. These parts are large enough, however, to solder them by hand. Just use a narrow tipped soldering iron.
 
 #### A. LEDS
 
 I'm told that the Neopixel LEDS are liable to be damaged by excessive heat. So turn down your iron, and pause between pads to let the heat disipate. Also, these may just barely fit in the holes, so you may need to push them in a bit. Finally, place them with the LED side facing away from the component side. This is the "up" direction when the keyboard is complete. And orient the leads so that the one with the clipped corner is the GND lead. There are 42 LEDS
 
-Todo: Picture of board w/ numbers on the LEDs
+Todo: Picture of LED w/ ground marked
 
 Because the LEDs all communicate serially, if there is a failure of one, it will take out all of the rest of them in the chain. See the picture for the order in which the LEDs are connected, 1 through 42.
 
-Todo: Picture of LED w/ ground marked
+Todo: Picture of board w/ numbers on the LEDs
 
 If you have a failure, find the first LED that is not working. The problem is most likely in that LED, or the one just preceding it in the chain. Check carefully your soldering. You can check the continuity, for example, between DOUT of one LED and DIN of the next. Or you can check the VDD or GND connections. If you can't find the problem, then replace the suspicious LEDs.
 
 #### B. Diodes
 
-There are 43 diodes, one for each switch, and one additional to step down the power to the first LED so that it remains in spec even though the signal from the RP2040 is 3.3V. You don't need to know this, just solder the diodes in the orientation shown, with the two lines on the diode facing the same way as the diode symbol points.
+There are 43 diodes, one for each switch, and one additional to step down the power to the first LED so that it remains in spec even though the signal from the RP2040 is 3.3V. You don't need to know this, just solder the diodes in the orientation shown, with the two faint lines on the diode facing the same way as the diode symbol points.
 
 Todo: Picture of a single diode
 
@@ -54,7 +54,7 @@ There are 4 surface mount resistors, two near the USB-C connector, and two near 
 
 ### 2. The Sockets
 
-The sockets not only require an electrical connection, but a good physical one too. This is because there is some force on the socket when inserting switches. Don't be afraid to use a good bit of solder, however, be cautious that the solder doesn't run inside the socked and foul the hotswappable springs that hold the switches.
+The sockets not only require an electrical connection, but a good physical one too. This is because there is some force on the socket when inserting switches. Don't be afraid to use a good bit of solder, however, be cautious that the solder doesn't run inside the socket and foul the hot-swappable springs that hold the switches.
 
 Todo Picture closeup of sockets
 
@@ -78,8 +78,6 @@ Todo Picture closeup of USB-C
 
 These are easy. Just stick them through the holes and solder.
 
-Todo Picture closeup of Push Buttons 
-
 ### 6. The OLED Display (top side)
 
 I removed the plastic spacer from the pins and just soldered it as flat as I could against the top of the PCB.
@@ -88,9 +86,10 @@ I removed the plastic spacer from the pins and just soldered it as flat as I cou
 
 Before you screw the whole thing together, I would suggest some tests to see if it all works.
 
-1. Connect the keyboard to a computer. It should come up, and mount as a flash drive in your OS. Download the `rvnash_richkbd_default.uf2` file from the [latest release](https://github.com/rvnash/qmk_firmware/releases) and drag it into that flash drive. The keyboard should restart, and connect itself as a keyboard. The LEDS should light up.
+1. Connect the keyboard's raw soldered PCB to a computer. The unprogammed RP2040 should mount as a flash drive in your OS. Download the `rvnash_richkbd_default.uf2` file from the [latest release](https://github.com/rvnash/qmk_firmware/releases) and drag it into that flash drive. The RP2040 should restart, and connect itself as a keyboard to the system. The LEDS should also light up.
 2. You can use a pair of tweezers to make contact accross a few sockets and test that some characters show on the screen.
 3. You could put switches in every socket, and see that they all work.
+4. The OLED display should have status on it.
 
 ### 8. Final assembly
 
