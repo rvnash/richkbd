@@ -713,5 +713,11 @@
   (gr_line (start 95.355733 72.371875) (end 99.93028 74.127877) (layer "F.Fab") (width 0.1) (tstamp 00000000-0000-0000-0000-00005b88c1a2))
   (gr_line (start 159.887965 70.150621) (end 158.131936 74.725228) (layer "F.Fab") (width 0.1) (tstamp 2e588628-811b-4339-abd5-efe152565d9e))
   (gr_line (start 156.722691 71.559894) (end 161.297233 73.315896) (layer "F.Fab") (width 0.1) (tstamp 8f3380cc-68df-47d5-8a13-32938abe4f74))
+  (gr_text "richkbd 2.0" (at 99.68 92.07 -21) (layer "F.SilkS") (tstamp 7835716e-2fb0-4551-997b-3ad3d00e6b8e)
+    (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+  )
+  (gr_text "richkbd 2.0" (at 99.66 92.08 -21) (layer "F.SilkS") (tstamp d84264ac-9b63-43c7-96f6-23f6fb07a42f)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
 
 )
