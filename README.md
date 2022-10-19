@@ -15,7 +15,7 @@ If you wanted to construct your own, take a look at the [Build Guide](doc/buildg
  
 ## Software
 
-There is a full QMK software implementation which you ca find [here](https://github.com/rvnash/qmk_firmware/tree/rvnash_rp2040/keyboards/rvnash/richkbd). If you don't enjoy working from the source, you can find a released flashable version [here](https://github.com/rvnash/qmk_firmware/releases).
+There is a full QMK software implementation which you can find [here](https://github.com/rvnash/qmk_firmware/tree/rvnash_rp2040/keyboards/rvnash/richkbd). If you don't enjoy working from the source, you can find a released flashable version [here](https://github.com/rvnash/qmk_firmware/releases).
 
 ## Photos
 
