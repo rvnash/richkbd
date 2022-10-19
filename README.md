@@ -33,4 +33,4 @@ The raw PCB
 
 A soldered PCB
 
-TODO Picture of final board component side.
+![populated](https://i.imgur.com/55qC5As.jpg)

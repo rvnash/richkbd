@@ -32,13 +32,13 @@ I listed this as one step, because I use a reflow oven to solder them all at onc
 
 #### A. LEDS
 
-I'm told that the Neopixel LEDS are liable to be damaged by excessive heat. So turn down your iron, and pause between pads to let the heat disipate. Also, these may just barely fit in the holes, so you may need to push them in a bit. Finally, place them with the LED side facing away from the component side. This is the "up" direction when the keyboard is complete. And orient the leads so that the one with the clipped corner is the GND lead. There are 42 LEDS
+I'm told that the Neopixel LEDS are liable to be damaged by excessive heat. So turn down your iron, and pause between pads to let the heat disipate. Also, these may just barely fit in the holes, so you may need to push them in a bit. Finally, place them with the LED side facing away from the component side. This is the "up" direction when the keyboard is complete. And orient the leads so that the one with the *clipped corner* is the GND lead. There are 42 LEDS
 
-Todo: Picture of LED w/ ground marked
+![Picture of LED w/ ground marked](https://i.imgur.com/l10TsX8.jpg)
 
 Because the LEDs all communicate serially, if there is a failure of one, it will take out all of the rest of them in the chain. See the picture for the order in which the LEDs are connected, 1 through 42.
 
-Todo: Picture of board w/ numbers on the LEDs
+![Picture of board w/ numbers on the LEDs](https://i.imgur.com/7ZMOJrj.jpg)
 
 If you have a failure, find the first LED that is not working. The problem is most likely in that LED, or the one just preceding it in the chain. Check carefully your soldering. You can check the continuity, for example, between DOUT of one LED and DIN of the next. Or you can check the VDD or GND connections. If you can't find the problem, then replace the suspicious LEDs.
 
@@ -46,7 +46,7 @@ If you have a failure, find the first LED that is not working. The problem is mo
 
 There are 43 diodes, one for each switch, and one additional to step down the power to the first LED so that it remains in spec even though the signal from the RP2040 is 3.3V. You don't need to know this, just solder the diodes in the orientation shown, with the two faint lines on the diode facing the same way as the diode symbol points.
 
-Todo: Picture of a single diode
+![Picture of a single diode](https://i.imgur.com/p9W31ty.jpg)
 
 #### C. Resistors
 
@@ -56,23 +56,23 @@ There are 4 surface mount resistors, two near the USB-C connector, and two near 
 
 The sockets not only require an electrical connection, but a good physical one too. This is because there is some force on the socket when inserting switches. Don't be afraid to use a good bit of solder, however, be cautious that the solder doesn't run inside the socket and foul the hot-swappable springs that hold the switches.
 
-Todo Picture closeup of sockets
+![Picture closeup of sockets](https://i.imgur.com/D2wxxsK.jpg)
 
 ### 3. The RP2040 Stamp
 
-Use an Exacto knife to cut the LED jumpers to the Neopixel on the Stamp itself doesn't light up.
+Use an Exacto knife to cut the center of these jumpers to disable the Neopixel on the Stamp itself doesn't light up.
 
 ![stamp_neo](../images/Stamp_neopixel.jpg)
 
 Carefully position the Stamp in the correct orientation, and lined up around all 4 sides. Tack down the daughter board with one or two castelated pads to the pad on the PCB. Once you have that done, it should be quick work to solder the rest of the pads all around.
 
-Todo Picture closeup of stamp soldered in
+![Picture closeup of stamp soldered in](https://i.imgur.com/8LfklUW.jpg)
 
 ### 4. The USB-C Connector (top side)
 
 This can be hard to get right. The way I did it is to put a bit of solder paste on the pins of the socket, insert it into the holes, and then soldering the strain relief around the shield down. Then I heated each through-hole with the iron, and that seemed to work to attach the pins. I'm not too happy with this method, because I can't see how good of a job inside the holes, but it works. 🤷
 
-Todo Picture closeup of USB-C
+![Picture closeup of USB-C](https://i.imgur.com/JrD4Me9.jpg)
 
 ### 5. The Push Buttons (top side)
 
@@ -81,6 +81,8 @@ These are easy. Just stick them through the holes and solder.
 ### 6. The OLED Display (top side)
 
 I removed the plastic spacer from the pins and just soldered it as flat as I could against the top of the PCB.
+
+![Picture of edge of oled](https://i.imgur.com/PzKg4H4.jpg)
 
 ### 7. Testing
 
@@ -96,7 +98,7 @@ Before you screw the whole thing together, I would suggest some tests to see if 
 If everything seems to work, just screw it all together with a washer on the top and bottom. From the bottom to the top, these are the layers to stack.
 
 1. Bottom plate
-2. PCB (fully soldered together)
+2. PCB (fully populated)
 3. 2 x Top plates per side (for a total of 4). These should be double stacked on each side.
 4. The switches
 5. The keycaps
