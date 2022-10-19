@@ -32,11 +32,11 @@ I listed this as one step, because I use a reflow oven to solder them all at onc
 
 #### A. LEDS
 
-I'm told that the Neopixel LEDS are liable to be damaged by excessive heat. So turn down your iron, and pause between pads to let the heat disipate. Also, these may just barely fit in the holes, so you may need to push them in a bit. Finally, place them with the LED side facing away from the component side. This is the "up" direction when the keyboard is complete. And orient the leads so that the one with the *clipped corner* is the GND lead. There are 42 LEDS
+I'm told that the Neopixel LEDS are liable to be damaged by excessive heat. So turn down your iron, and pause between pads to let the heat disipate. Also, these may just barely fit in the holes, so you may need to push them in a bit. Finally, place them with the LED side facing away from the component side. This is the "up" direction when the keyboard is complete. And orient the leads so that the one with the *clipped corner* is the GND lead. This is a little difficult to see in the photo below, so take a look at the [datasheet](https://cdn-shop.adafruit.com/product-files/4960/4960_SK6812MINI-E_REV02_EN.pdf) to see a line drawing.
 
 ![Picture of LED w/ ground marked](https://i.imgur.com/l10TsX8.jpg)
 
-Because the LEDs all communicate serially, if there is a failure of one, it will take out all of the rest of them in the chain. See the picture for the order in which the LEDs are connected, 1 through 42.
+Because the LEDs all communicate serially, if there is a failure of one, it will take out all of the following LEDS in the chain. See the picture for the order in which the LEDs are connected, 1 through 42.
 
 ![Picture of board w/ numbers on the LEDs](https://i.imgur.com/7ZMOJrj.jpg)
 
@@ -44,13 +44,15 @@ If you have a failure, find the first LED that is not working. The problem is mo
 
 #### B. Diodes
 
-There are 43 diodes, one for each switch, and one additional to step down the power to the first LED so that it remains in spec even though the signal from the RP2040 is 3.3V. You don't need to know this, just solder the diodes in the orientation shown, with the two faint lines on the diode facing the same way as the diode symbol points.
+There are 43 diodes, one for each switch, and one additional. Solder the diodes in the orientation shown, with the (very) faint line on the diode facing the same way as the diode symbol points.
 
 ![Picture of a single diode](https://i.imgur.com/p9W31ty.jpg)
 
 #### C. Resistors
 
-There are 4 surface mount resistors, two near the USB-C connector, and two near the OLED display connections. Orientation does not matter. Just make sure you put the 5.1K resistor near the USB-C connector, and the 10K resistors near the OLED display.
+There are 4 surface mount resistors, two near the USB-C connector, and two near the OLED display connections. Orientation does not matter. Just make sure you put the 5.1K resistor near the USB-C connector (R4 and R5), and the 10K resistors near the OLED display (R1 and R2).
+
+![Picture of resistors](https://i.imgur.com/XkU1WWg.jpg)
 
 ### 2. The Sockets
 
