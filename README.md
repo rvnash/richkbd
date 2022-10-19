@@ -1,6 +1,6 @@
 # richkbd 2.0
  
-The richkbd keyboard is a 42 key single piece Kaihl Choc Hotswap based keyboard which uses the [RP2040](https://www.raspberrypi.com/products/rp2040/) microcontroller. The layout of the keys is identical to two [Corne keyboards](https://github.com/foostan/crkbd) joined together into one. The halves are placed 21 from horizontal and the top keys are separated by 35mm.
+The richkbd keyboard is a 42 key single piece Kaihl Choc Hotswap based keyboard which uses the [RP2040](https://www.raspberrypi.com/products/rp2040/) microcontroller. The layout of the keys is identical to two [Corne keyboards](https://github.com/foostan/crkbd) joined together into one. The halves are placed 21° from horizontal and the top keys are separated by 35mm.
 
 If you wanted to construct your own, take a look at the [Build Guide](doc/buildguide.md).
 
@@ -15,7 +15,7 @@ If you wanted to construct your own, take a look at the [Build Guide](doc/buildg
  
 ## Software
 
-There is a full QMK software implementation which you can find [here](https://github.com/rvnash/qmk_firmware/tree/rvnash_rp2040/keyboards/rvnash/richkbd).
+There is a full QMK software implementation which you ca find [here](https://github.com/rvnash/qmk_firmware/tree/rvnash_rp2040/keyboards/rvnash/richkbd). If you don't enjoy working from the source, you can find a released flashable version [here](https://github.com/rvnash/qmk_firmware/releases).
 
 ## Photos
 
@@ -33,3 +33,4 @@ The raw PCB
 
 A soldered PCB
 
+TODO Picture of final board component side.
